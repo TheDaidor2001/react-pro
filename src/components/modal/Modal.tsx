@@ -68,6 +68,10 @@ export const Modal = ({ handleButtonClick, isModalVisible, trip }: Props): JSX.E
             }
             handleButtonClick()
             navigate(ROUTES.BOOKINGS)
+            toast.success('Booking created successfully', {
+                className: 'notification',
+                position: 'top-right'
+            })
         } catch (error) {
             toast.error((error as Error).message, {
                 className: 'notification',
